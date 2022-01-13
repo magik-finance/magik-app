@@ -1,10 +1,19 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
-import { LogoIcon } from 'components/logo-icon'
-import { MenuIcon } from 'components/menu-icon'
-import { XMarkIcon } from 'components/x-mark-icon'
+
+import { LogoIcon } from 'components/icons/logo-icon'
+import { MenuIcon } from 'components/icons/menu-icon'
+import { XMarkIcon } from 'components/icons/x-mark-icon'
+import { NavLink } from 'components/nav-link'
+import NoiseImage from './noise.png'
+import Link from 'next/link'
+import { DiscordIcon } from 'components/icons/discord-icon'
+import { TelegramIcon } from 'components/icons/telegram-icon'
+import { GitHubIcon } from 'components/icons/git-hub-icon'
+import { TwitterIcon } from 'components/icons/twitter-icon'
 
 const navigation = [
+  { name: 'Home', href: '/' },
   { name: 'Dashboard', href: '#' },
   { name: 'Docs', href: '#' },
   { name: 'About', href: '#' },
@@ -23,7 +32,7 @@ export const TopNavigation = () => (
               <div className="flex items-center justify-between w-full md:w-auto">
                 <a href="#">
                   <span className="sr-only">Magik</span>
-                  <LogoIcon className="w-auto h-5 sm:h-10" />
+                  <LogoIcon className="w-auto h-6 sm:h-10" />
                 </a>
                 <div className="flex items-center -mr-2 md:hidden">
                   <Popover.Button className="inline-flex items-center justify-center p-2 text-white bg-transparent rounded-md hover:bg-button-hover-background focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
@@ -70,42 +79,53 @@ export const TopNavigation = () => (
         >
           <Popover.Panel
             focus
+            style={{ height: 4 * 110 }}
             className="absolute inset-x-0 top-14 transition origin-top transform overflow-hidden bg-main-background md:hidden"
           >
-            <div className="relative">
-              <div
-                style={{
-                  position: 'absolute',
-                  right: '-50px',
-                  top: '-50px',
-                  width: '137px',
-                  height: '137px',
-                  background: '#4E27B2',
-                  opacity: '0.5',
-                  filter: 'blur(150px)',
-                  transform: 'matrix(0.71, -0.67, 0.75, 0.71, 0, 0)',
-                }}
-              />
-              <div className="pt-5 pb-6">
-                <div className="px-2 space-y-1">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="block px-3 py-2 text-base font-medium text-soft-font rounded-md hover:text-white"
-                    >
+            <div className="bg-primary-accent -top-16 -right-4 absolute w-36 h-36 opacity-50 blur-3xl rotate-45" />
+            <div
+              className="absolute inset-0 bg-repeat"
+              style={{
+                backgroundImage: `url(${NoiseImage.src})`,
+              }}
+            />
+            <div className="absolute inset-0 p-12">
+              <div className="space-y-1">
+                {navigation.map((item) => (
+                  <NavLink
+                    key={item.name}
+                    href={item.href}
+                    passHref={true}
+                    activeClassName="text-white"
+                    inactiveClassName="text-soft-font"
+                  >
+                    <a className="block px-3 py-2 text-2xl font-medium rounded-md hover:text-white">
                       {item.name}
                     </a>
-                  ))}
-                </div>
-                <div className="px-5 mt-6">
-                  <a
-                    href="#"
-                    className="block w-full px-4 py-3 font-medium text-center text-white rounded-md shadow bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700"
-                  >
-                    Connect wallet
+                  </NavLink>
+                ))}
+              </div>
+              <div className="flex mt-8">
+                <Link href="#" passHref={true}>
+                  <a className="block px-3 py-2 text-soft-font hover:text-white">
+                    <DiscordIcon className="w-5 h-5" />
                   </a>
-                </div>
+                </Link>
+                <Link href="#" passHref={true}>
+                  <a className="block px-3 py-2 text-soft-font hover:text-white">
+                    <TelegramIcon className="w-5 h-5" />
+                  </a>
+                </Link>
+                <Link href="#" passHref={true}>
+                  <a className="block px-3 py-2 text-soft-font hover:text-white">
+                    <GitHubIcon className="w-5 h-5" />
+                  </a>
+                </Link>
+                <Link href="#" passHref={true}>
+                  <a className="block px-3 py-2 text-soft-font hover:text-white">
+                    <TwitterIcon className="w-5 h-5" />
+                  </a>
+                </Link>
               </div>
             </div>
           </Popover.Panel>
