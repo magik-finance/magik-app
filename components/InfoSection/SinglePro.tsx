@@ -3,7 +3,7 @@ import { HTMLProps, VFC } from 'react'
 interface SingleProProps {
   Icon: VFC<HTMLProps<SVGSVGElement>>
   title: string
-  description: string
+  description: JSX.Element | string
 }
 
 export const SinglePro: VFC<SingleProProps> = ({
@@ -18,7 +18,7 @@ export const SinglePro: VFC<SingleProProps> = ({
       </div>
       {title}
     </div>
-    <div className="mt-4 text-sm leading-relaxed text-soft-font">
+    <div className="mt-4 text-sm leading-relaxed text-soft-font md:text-base md:ml-10 md:pl-5 md:mt-3">
       {description}
     </div>
   </div>
