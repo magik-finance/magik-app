@@ -10,7 +10,7 @@ import { TelegramIcon } from 'components/icons/telegram-icon'
 import { GitHubIcon } from 'components/icons/git-hub-icon'
 import { TwitterIcon } from 'components/icons/twitter-icon'
 import { NavLink } from 'components/nav-link'
-import NoiseImage from './noise.png'
+import { NoiseLayer } from 'components/noise-layer'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -30,6 +30,7 @@ export const TopNavigation = () => (
   <Popover as="header" className="relative">
     {({ open }) => (
       <>
+        <div className="h-14 md:hidden" />
         <div className="fixed top-0 left-0 z-10 w-full border-b bg-main-background border-b-light-border md:static">
           <nav
             className="relative flex items-center justify-between px-6 mx-auto h-14 max-w-7xl sm:px-6"
@@ -98,12 +99,7 @@ export const TopNavigation = () => (
             className="fixed inset-x-0 z-10 mt-px overflow-hidden transition origin-top transform border-b top-14 bg-main-background border-b-light-border md:hidden"
           >
             <div className="absolute rotate-45 opacity-50 bg-primary-accent -top-16 -right-4 w-36 h-36 blur-3xl" />
-            <div
-              className="absolute inset-0 bg-repeat"
-              style={{
-                backgroundImage: `url(${NoiseImage.src})`,
-              }}
-            />
+            <NoiseLayer />
             <div className="absolute inset-0 p-12">
               <div className="space-y-1">
                 {navigation.map((item) => (
