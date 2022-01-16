@@ -12,11 +12,12 @@ module.exports = {
         'soft-font': '#575B6A',
         'primary-accent': '#4E27B2',
         'primary-accent-light': '#935edf',
+        'secondary-accent': '#4cebad',
       },
       fontFamily: {
         sans: ['Gilmer', 'Helvetica', 'Arial', 'sans-serif'],
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }
