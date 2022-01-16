@@ -1,16 +1,12 @@
 import { HTMLProps, VFC } from 'react'
 
-interface SingleProProps {
+interface Props {
   Icon: VFC<HTMLProps<SVGSVGElement>>
   title: string
   description: JSX.Element | string
 }
 
-export const SinglePro: VFC<SingleProProps> = ({
-  Icon,
-  title,
-  description,
-}) => (
+export const SinglePro: VFC<Props> = ({ Icon, title, description }) => (
   <div className="flex flex-col">
     <div className="flex items-center gap-5 text-2xl font-bold text-white">
       <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary-accent">
