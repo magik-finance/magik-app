@@ -1,8 +1,12 @@
-import {LightningBoltIcon, LockClosedIcon, RefreshIcon,} from '@heroicons/react/outline';
-import {ChevronRightIcon, ExternalLinkIcon} from '@heroicons/react/solid';
-import {HeroHeader} from 'components/HeroHeader';
-
-import {TopNavigation} from 'components/TopNavigation';
+import {
+  LightningBoltIcon,
+  LockClosedIcon,
+  RefreshIcon,
+} from '@heroicons/react/outline'
+import { ChevronRightIcon, ExternalLinkIcon } from '@heroicons/react/solid'
+import { TopNavigation } from 'components/TopNavigation'
+import { HeroHeader } from 'components/HeroHeader'
+import { InfoSection } from 'components/InfoSection'
 
 const features = [
   {
@@ -82,6 +86,7 @@ export default function Index() {
         <TopNavigation />
         <main>
           <HeroHeader />
+          <InfoSection />
           {/* Header section */}
           <div className="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
             <div className="mx-auto max-w-7xl lg:px-8">

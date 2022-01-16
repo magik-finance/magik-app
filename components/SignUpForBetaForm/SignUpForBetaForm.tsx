@@ -1,9 +1,9 @@
-import clsx from 'clsx';
-import {ColorfulLayer} from 'components/ColorfulLayer';
-import {LogoSmallIcon} from 'components/icons/logo-small-icon';
-import {UsersIcon} from 'components/icons/users-icon';
-import {VFC} from 'react';
-import {useForm, Validate} from 'react-hook-form';
+import clsx from 'clsx'
+import { ColorfulLayer } from 'components/ColorfulLayer'
+import { LogoSmallIcon } from 'components/icons/logo-small-icon'
+import { UsersWithPlusIcon } from 'components/icons/users-with-plus-icon'
+import { VFC } from 'react'
+import { useForm, Validate } from 'react-hook-form'
 
 interface FormValues {
   name: string
@@ -40,7 +40,7 @@ export const SignUpForBetaForm: VFC<{ className?: string }> = ({
       className={clsx('relative', className)}
       onSubmit={handleSubmit(submit)}
     >
-      <ColorfulLayer className="blur-md rounded-2xl opacity-40 md:blur-3xl" />
+      <ColorfulLayer className="blur-3xl rounded-2xl opacity-40" />
       <div className="absolute inset-0 border bg-main-background rounded-2xl border-light-border" />
       <div className="relative flex flex-col text-white">
         <div className="flex items-center justify-center w-8 h-8 border rounded-full border-light-border">
@@ -113,7 +113,7 @@ export const SignUpForBetaForm: VFC<{ className?: string }> = ({
           </div>
         </button>
         <div className="flex w-full gap-2 mt-6 md:mt-7">
-          <UsersIcon className="w-6 h-6 shrink-0" />
+          <UsersWithPlusIcon className="w-6 h-6 shrink-0" />
           <div className="text-xs font-medium leading-relaxed text-soft-font">
             <span className="hidden md:inline">
               Currently we still have spots in our Beta version. <br />
