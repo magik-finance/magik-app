@@ -1,16 +1,16 @@
-import { Fragment, VFC } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import Link from 'next/link'
+import {Fragment, VFC} from 'react';
+import {Popover, Transition} from '@headlessui/react';
+import Link from 'next/link';
 
-import { LogoIcon } from 'components/icons/logo-icon'
-import { MenuIcon } from 'components/icons/menu-icon'
-import { XMarkIcon } from 'components/icons/x-mark-icon'
-import { DiscordIcon } from 'components/icons/discord-icon'
-import { TelegramIcon } from 'components/icons/telegram-icon'
-import { GitHubIcon } from 'components/icons/git-hub-icon'
-import { TwitterIcon } from 'components/icons/twitter-icon'
-import { NavLink } from 'components/nav-link'
-import { NoiseLayer } from 'components/noise-layer'
+import {LogoIcon} from 'components/icons/logo-icon';
+import {MenuIcon} from 'components/icons/menu-icon';
+import {XMarkIcon} from 'components/icons/x-mark-icon';
+import {DiscordIcon} from 'components/icons/discord-icon';
+import {TelegramIcon} from 'components/icons/telegram-icon';
+import {GitHubIcon} from 'components/icons/git-hub-icon';
+import {TwitterIcon} from 'components/icons/twitter-icon';
+import {NavLink} from 'components/NavLink';
+import {NoiseLayer} from 'components/NoiseLayer';
 
 const navigation = [
   { name: 'Home', href: '/' },

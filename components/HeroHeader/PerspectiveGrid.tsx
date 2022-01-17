@@ -1,4 +1,4 @@
-import { SVGProps, VFC } from 'react'
+import {SVGProps, VFC} from 'react';
 
 export const PerspectiveGrid: VFC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
