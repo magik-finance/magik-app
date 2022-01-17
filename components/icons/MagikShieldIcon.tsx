@@ -1,6 +1,6 @@
-import { SVGProps, VFC } from 'react'
+import { HTMLProps, VFC } from 'react'
 
-export const MagikShieldIcon: VFC<SVGProps<SVGSVGElement>> = (props) => (
+export const MagikShieldIcon: VFC<HTMLProps<SVGSVGElement>> = (props) => (
   <svg
     viewBox="0 0 246 253"
     fill="none"

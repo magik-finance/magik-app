@@ -1,4 +1,4 @@
-import {HTMLProps, VFC} from 'react';
+import { HTMLProps, VFC } from 'react'
 
 const style = {
   background:

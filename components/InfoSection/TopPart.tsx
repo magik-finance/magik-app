@@ -1,12 +1,13 @@
+import Image from 'next/image'
 import { VFC } from 'react'
 
-import { GoldBarsIcon } from 'components/icons/gold-bars-icon'
-import { SettingsSliderIcon } from 'components/icons/settings-slider-icon'
-import { UsersIcon } from 'components/icons/users-icon'
+import { GoldBarsIcon } from 'components/icons/GoldBarsIcon'
+import { SettingsSliderIcon } from 'components/icons/SettingsSliderIcon'
+import { UsersIcon } from 'components/icons/UsersIcon'
+
 import { SinglePro } from './SinglePro'
-import Image from 'next/image'
-import AppScreenMobileImage from './app-screen-mobile.png'
 import AppScreenDesktopImage from './app-screen-desktop.png'
+import AppScreenMobileImage from './app-screen-mobile.png'
 
 const pros = [
   {
@@ -82,6 +83,6 @@ export const TopPart: VFC = () => (
         />
       </div>
     </div>
-    <div className="mt-24" />
+    <div className="mt-24 md:mt-60" />
   </div>
 )

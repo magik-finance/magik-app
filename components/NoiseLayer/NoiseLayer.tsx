@@ -1,6 +1,7 @@
-import clsx from 'clsx';
-import {HTMLProps, VFC} from 'react';
-import NoiseImage from './noise.png';
+import clsx from 'clsx'
+import { HTMLProps, VFC } from 'react'
+
+import NoiseImage from './noise.png'
 
 /**
  * It's a decoration layer that will cover outer container with a semi-transparent image of a noise

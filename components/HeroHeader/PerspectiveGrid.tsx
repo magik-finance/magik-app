@@ -1,6 +1,6 @@
-import {SVGProps, VFC} from 'react';
+import { HTMLProps, VFC } from 'react'
 
-export const PerspectiveGrid: VFC<SVGProps<SVGSVGElement>> = (props) => (
+export const PerspectiveGrid: VFC<HTMLProps<SVGSVGElement>> = (props) => (
   <svg
     viewBox="0 0 1760 928"
     fill="none"

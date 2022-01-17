@@ -16,11 +16,13 @@ export const SingleFact: VFC<Props> = ({
   numbers,
   description,
 }) => (
-  <div className="flex flex-col w-full p-6 border border-light-border rounded-2xl">
+  <div className="flex flex-col w-full p-6 border border-light-border rounded-2xl md:p-12">
     <Icon className={clsx('self-center w-auto h-24 mt-8', iconClassName)} />
     <div className="mt-12 text-white">{title}</div>
-    <div className="mt-3 text-3xl font-medium text-white">{numbers}</div>
-    <div className="mt-5 text-xs leading-relaxed text-soft-font md:text-base md:ml-10 md:pl-5 md:mt-3">
+    <div className="mt-3 text-3xl font-medium text-white md:text-4xl md:font-bold ">
+      {numbers}
+    </div>
+    <div className="mt-5 text-xs leading-relaxed text-soft-font md:text-sm md:mt-2">
       {description}
     </div>
   </div>

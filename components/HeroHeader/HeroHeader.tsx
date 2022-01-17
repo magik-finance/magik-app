@@ -1,12 +1,14 @@
-import {ArrowUpIcon} from '@heroicons/react/outline';
-import {BackdropLight} from 'components/BackDropLight';
-import {ColorfulLayer} from 'components/ColorfulLayer';
-import {SolanaIcon} from 'components/icons/solana-icon';
-import {NoiseLayer} from 'components/NoiseLayer';
-import {SignUpForBetaForm} from 'components/SignUpForBetaForm';
-import Link from 'next/link';
-import {VFC} from 'react';
-import {PerspectiveGrid} from './PerspectiveGrid';
+import { ArrowUpIcon } from '@heroicons/react/outline'
+import Link from 'next/link'
+import { VFC } from 'react'
+
+import { BackdropLight } from 'components/BackDropLight'
+import { ColorfulLayer } from 'components/ColorfulLayer'
+import { NoiseLayer } from 'components/NoiseLayer'
+import { SignUpForBetaForm } from 'components/SignUpForBetaForm'
+import { SolanaIcon } from 'components/icons/SolanaIcon'
+
+import { PerspectiveGrid } from './PerspectiveGrid'
 
 const BuildOnSolanaBadge: VFC = () => (
   <div className="flex items-center gap-2 px-4 py-2 text-xs font-medium leading-none text-white bg-black border rounded-full md:px-6 md:text-sm border-light-border">

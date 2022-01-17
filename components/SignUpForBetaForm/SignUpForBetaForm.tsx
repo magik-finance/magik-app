@@ -1,9 +1,10 @@
 import clsx from 'clsx'
-import { ColorfulLayer } from 'components/ColorfulLayer'
-import { LogoSmallIcon } from 'components/icons/logo-small-icon'
-import { UsersWithPlusIcon } from 'components/icons/users-with-plus-icon'
 import { VFC } from 'react'
 import { useForm, Validate } from 'react-hook-form'
+
+import { ColorfulLayer } from 'components/ColorfulLayer'
+import { LogoSmallIcon } from 'components/icons/LogoSmallIcon'
+import { UsersWithPlusIcon } from 'components/icons/UsersWithPlusIcon'
 
 interface FormValues {
   name: string

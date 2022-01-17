@@ -1,7 +1,9 @@
-import { MagikChartIcon } from 'components/icons/magik-chart-icon'
-import { MagikCoinIcon } from 'components/icons/magik-coin-icon'
-import { MagikShieldIcon } from 'components/icons/magik-shield-icon'
 import { VFC } from 'react'
+
+import { MagikChartIcon } from 'components/icons/MagikChartIcon'
+import { MagikCoinIcon } from 'components/icons/MagikCoinIcon'
+import { MagikShieldIcon } from 'components/icons/MagikShieldIcon'
+
 import { SingleFact } from './SingleFact'
 
 const facts = [
@@ -11,9 +13,8 @@ const facts = [
     numbers: '$0.01 - $0.30',
     description: (
       <>
-        Borrow for free while we put your collateral to
-        <br />
-        work to generate yields to pay off the loan
+        Borrow for free while we put your collateral to work to generate yields
+        to pay off the loan
       </>
     ),
   },
@@ -25,9 +26,8 @@ const facts = [
     numbers: '7% - 12%',
     description: (
       <>
-        Borrow for free while we put your collateral to
-        <br />
-        work to generate yields to pay off the loan
+        Borrow for free while we put your collateral to work to generate yields
+        to pay off the loan
       </>
     ),
   },
@@ -39,9 +39,8 @@ const facts = [
     numbers: '100%',
     description: (
       <>
-        Borrow for free while we put your collateral to
-        <br />
-        work to generate yields to pay off the loan
+        Borrow for free while we put your collateral to work to generate yields
+        to pay off the loan
       </>
     ),
   },
@@ -49,20 +48,20 @@ const facts = [
 
 export const BottomPart: VFC = () => (
   <div className="flex flex-col px-6 md:max-w-7xl md:mx-auto">
-    <div className="self-center py-2 text-xs font-medium text-center text-white border rounded-full border-light-border w-52">
+    <div className="self-center py-2 text-xs font-medium text-center text-white border rounded-full border-light-border w-52 md:text-sm md:w-auto md:px-6">
       Whitelist now open
     </div>
-    <div className="mt-8 text-3xl font-medium text-center text-white">
+    <div className="mt-8 text-3xl font-medium text-center text-white md:text-7xl md:leading-tight">
       Crypto loans that
       <br />
       repay itself
     </div>
-    <div className="mt-4 text-sm text-center text-soft-font">
+    <div className="mt-4 text-sm text-center text-soft-font md:text-xl md:mt-6">
       Borrow for free while we put your collateral to
       <br />
       work to generate yields to pay off the loan
     </div>
-    <div className="flex flex-col gap-8 mt-14">
+    <div className="flex flex-col gap-8 mt-14 md:flex-row md:gap-16 md:mt-24">
       {facts.map(({ Icon, title, numbers, description, iconClassName }) => (
         <SingleFact
           key={title}
@@ -74,6 +73,6 @@ export const BottomPart: VFC = () => (
         />
       ))}
     </div>
-    <div className="mt-24" />
+    <div className="mt-24 md:mt-48" />
   </div>
 )

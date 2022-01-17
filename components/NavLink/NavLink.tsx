@@ -1,6 +1,6 @@
-import {useRouter} from 'next/router';
-import Link, {LinkProps} from 'next/link';
-import React, {Children, FC} from 'react';
+import Link, { LinkProps } from 'next/link'
+import { useRouter } from 'next/router'
+import React, { Children, FC } from 'react'
 
 interface Props extends LinkProps {
   inactiveClassName?: string
