@@ -4,6 +4,7 @@ import {
   LightningBoltIcon,
 } from '@heroicons/react/outline'
 import { ChevronRightIcon, ExternalLinkIcon } from '@heroicons/react/solid'
+import { HeroHeader } from 'components/hero-header'
 
 import { TopNavigation } from 'components/top-navigation'
 
@@ -80,10 +81,11 @@ const social = [
 
 export default function Index() {
   return (
-    <div className="bg-white">
+    <div className="bg-main-background">
       <div className="relative overflow-hidden">
         <TopNavigation />
         <main>
+          <HeroHeader />
           {/* Header section */}
           <div className="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
             <div className="mx-auto max-w-7xl lg:px-8">
