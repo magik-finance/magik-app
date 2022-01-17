@@ -1,8 +1,8 @@
 import {LightningBoltIcon, LockClosedIcon, RefreshIcon,} from '@heroicons/react/outline';
 import {ChevronRightIcon, ExternalLinkIcon} from '@heroicons/react/solid';
-import {HeroHeader} from 'components/hero-header';
+import {HeroHeader} from 'components/HeroHeader';
 
-import {TopNavigation} from 'components/top-navigation';
+import {TopNavigation} from 'components/TopNavigation';
 
 const features = [
   {
