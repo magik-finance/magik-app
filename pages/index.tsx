@@ -1,16 +1,12 @@
-import {
-  LockClosedIcon,
-  RefreshIcon,
-  LightningBoltIcon,
-} from '@heroicons/react/outline'
-import { ChevronRightIcon, ExternalLinkIcon } from '@heroicons/react/solid'
-import { HeroHeader } from 'components/hero-header'
+import {LightningBoltIcon, LockClosedIcon, RefreshIcon,} from '@heroicons/react/outline';
+import {ChevronRightIcon, ExternalLinkIcon} from '@heroicons/react/solid';
+import {HeroHeader} from 'components/hero-header';
 
-import { TopNavigation } from 'components/top-navigation'
+import {TopNavigation} from 'components/top-navigation';
 
 const features = [
   {
-    name: 'Lighnting fast',
+    name: 'Lighting fast',
     description:
       'Magik is built on Solana, an ultra-fast blockchain giving transaction finality in sub-seconds',
     icon: LightningBoltIcon,
