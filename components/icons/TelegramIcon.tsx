@@ -1,6 +1,6 @@
-import { SVGProps, VFC } from 'react'
+import { HTMLProps, VFC } from 'react'
 
-export const TelegramIcon: VFC<SVGProps<SVGSVGElement>> = (props) => (
+export const TelegramIcon: VFC<HTMLProps<SVGSVGElement>> = (props) => (
   <svg
     viewBox="0 0 20 20"
     fill="none"

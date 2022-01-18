@@ -4,3 +4,7 @@
 @tailwind components;
 
 @tailwind utilities;
+
+body {
+  @apply bg-main-background;
+}
