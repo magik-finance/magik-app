@@ -1,5 +1,6 @@
 import { HeroHeader } from 'components/HeroHeader'
 import { InfoSection } from 'components/InfoSection'
+import { JoinOurCommunity } from 'components/JoinOurCommunity'
 import { SignUpForBetaSmallForm } from 'components/SignUpForBetaSmallForm'
 import { TopNavigation } from 'components/TopNavigation'
 
@@ -14,6 +15,7 @@ export default function Index() {
         </main>
         <footer>
           <SignUpForBetaSmallForm />
+          <JoinOurCommunity />
         </footer>
       </div>
     </div>
