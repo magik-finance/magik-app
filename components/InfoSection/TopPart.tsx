@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { VFC } from 'react'
 
 import { GoldBarsIcon } from 'components/icons/GoldBarsIcon'
@@ -69,18 +68,12 @@ export const TopPart: VFC = () => (
         ))}
       </div>
       <div className="relative -mx-6 w-[351px] self-end mt-24 md:hidden">
-        <Image
-          src={AppScreenMobileImage}
-          alt="App screen mobile version"
-          layout="responsive"
-        />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={AppScreenMobileImage.src} alt="App screen mobile version" />
       </div>
       <div className="hidden relative w-[631px] h-[518px] md:block ml-6">
-        <Image
-          src={AppScreenDesktopImage}
-          alt="App screen desktop version"
-          layout="responsive"
-        />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={AppScreenDesktopImage.src} alt="App screen desktop version" />
       </div>
     </div>
     <div className="mt-24 md:mt-60" />

@@ -1,6 +1,6 @@
-import { HTMLProps, VFC } from 'react'
+import { SVGProps, VFC } from 'react'
 
-export const LogoIcon: VFC<HTMLProps<SVGSVGElement>> = (props) => (
+export const LogoIcon: VFC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     viewBox="0 0 78 21"
     fill="none"

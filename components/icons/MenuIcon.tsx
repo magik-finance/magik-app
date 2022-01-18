@@ -1,6 +1,6 @@
-import { HTMLProps, VFC } from 'react'
+import { SVGProps, VFC } from 'react'
 
-export const MenuIcon: VFC<HTMLProps<SVGSVGElement>> = (props) => (
+export const MenuIcon: VFC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     viewBox="0 0 28 9"
     fill="none"

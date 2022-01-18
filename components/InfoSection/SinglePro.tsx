@@ -1,7 +1,7 @@
-import { HTMLProps, VFC } from 'react'
+import { SVGProps, VFC } from 'react'
 
 interface Props {
-  Icon: VFC<HTMLProps<SVGSVGElement>>
+  Icon: VFC<SVGProps<SVGSVGElement>>
   title: string
   description: JSX.Element | string
 }

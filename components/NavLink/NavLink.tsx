@@ -20,7 +20,9 @@ export const NavLink: FC<Props> = ({
   const child = Children.only(children)
 
   const childClassName =
-    typeof child === 'object' && 'props' in child ? child.props.className : ''
+    child && typeof child === 'object' && 'props' in child
+      ? child.props.className
+      : ''
 
   const className =
     asPath === props.href || asPath === props.as
@@ -29,7 +31,7 @@ export const NavLink: FC<Props> = ({
 
   return (
     <Link {...props}>
-      {typeof child === 'object' && 'props' in child
+      {child && typeof child === 'object' && 'props' in child
         ? React.cloneElement(child, {
             className: className || null,
           })

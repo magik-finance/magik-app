@@ -1,6 +1,6 @@
-import { HTMLProps, VFC } from 'react'
+import { SVGProps, VFC } from 'react'
 
-export const ArrowUpIcon: VFC<HTMLProps<SVGSVGElement>> = (props) => (
+export const ArrowUpIcon: VFC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     viewBox="0 0 10 10"
     fill="none"
