@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import { VFC } from 'react'
-import { useForm, Validate } from 'react-hook-form'
+import { SubmitHandler, useForm, Validate } from 'react-hook-form'
 
 import { ColorfulLayer } from 'components/ColorfulLayer'
 import { LogoSmallIcon } from 'components/icons/LogoSmallIcon'
@@ -32,7 +32,7 @@ export const SignUpForBetaForm: VFC<{ className?: string }> = ({
     formState: { errors },
   } = useForm<FormValues>()
 
-  const submit = (values) => {
+  const submit: SubmitHandler<FormValues> = (values) => {
     console.log('values', values)
   }
 

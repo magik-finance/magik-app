@@ -1,6 +1,6 @@
-import { HTMLProps, VFC } from 'react'
+import { SVGProps, VFC } from 'react'
 
-export const MagikChartIcon: VFC<HTMLProps<SVGSVGElement>> = (props) => (
+export const MagikChartIcon: VFC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     viewBox="0 0 101 102"
     fill="none"

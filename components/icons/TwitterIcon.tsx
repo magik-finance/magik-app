@@ -1,6 +1,6 @@
-import { HTMLProps, VFC } from 'react'
+import { SVGProps, VFC } from 'react'
 
-export const TwitterIcon: VFC<HTMLProps<SVGSVGElement>> = (props) => (
+export const TwitterIcon: VFC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     viewBox="0 0 20 20"
     fill="none"
