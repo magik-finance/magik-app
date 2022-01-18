@@ -1,4 +1,6 @@
+import clsx from 'clsx'
 import Link from 'next/link'
+import { VFC } from 'react'
 
 import { DiscordIcon } from 'components/icons/DiscordIcon'
 import { GitHubIcon } from 'components/icons/GitHubIcon'
@@ -12,8 +14,10 @@ const icons = [
   { name: 'Twitter', Icon: TwitterIcon, href: '#' },
 ]
 
-export const JoinOurCommunity = () => (
-  <div className="px-6 mb-24 md:mx-auto md:max-w-7xl">
+export const JoinOurCommunity: VFC<{ className?: string }> = ({
+  className,
+}) => (
+  <div className={clsx('px-6 md:mx-auto md:max-w-7xl', className)}>
     <div className="py-4 border-t border-b md:py-6 border-light-border md:flex md:justify-between md:items-center">
       <div className="text-3xl font-medium text-white md:text-5xl">
         Join our{' '}

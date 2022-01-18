@@ -1,11 +1,14 @@
 import clsx from 'clsx'
+import { VFC } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
 interface FormValues {
   email: string
 }
 
-export const SignUpForBetaSmallForm = () => {
+export const SignUpForBetaSmallForm: VFC<{ className?: string }> = ({
+  className,
+}) => {
   const {
     register,
     handleSubmit,
@@ -18,7 +21,10 @@ export const SignUpForBetaSmallForm = () => {
 
   return (
     <form
-      className="mb-24 md:flex md:justify-between md:max-w-7xl md:mx-auto md:items-center"
+      className={clsx(
+        ' md:flex md:justify-between md:max-w-7xl md:mx-auto md:items-center',
+        className
+      )}
       onSubmit={handleSubmit(submit)}
     >
       <div className="px-6 text-6xl font-medium leading-tight text-white md:text-7xl md:leading-tight">
@@ -32,7 +38,7 @@ export const SignUpForBetaSmallForm = () => {
         </div>
         <div
           className={clsx(
-            'flex mt-3 overflow-hidden border rounded-lg border-light-border focus-within:ring',
+            'flex mt-3 overflow-hidden border rounded-lg border-light-border focus-within:ring-1',
             {
               'ring-2 ring-red-600 focus-within:ring-2 focus-within:ring-red-700':
                 !!errors.email,
