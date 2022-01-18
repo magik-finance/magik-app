@@ -1,6 +1,6 @@
-import { HTMLProps, VFC } from 'react'
+import { SVGProps, VFC } from 'react'
 
-export const SettingsSliderIcon: VFC<HTMLProps<SVGSVGElement>> = (props) => (
+export const SettingsSliderIcon: VFC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     viewBox="0 0 24 24"
     fill="none"

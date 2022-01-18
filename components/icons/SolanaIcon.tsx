@@ -1,6 +1,6 @@
-import { HTMLProps, VFC } from 'react'
+import { SVGProps, VFC } from 'react'
 
-export const SolanaIcon: VFC<HTMLProps<SVGSVGElement>> = (props) => (
+export const SolanaIcon: VFC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     viewBox="0 0 16 13"
     fill="none"
