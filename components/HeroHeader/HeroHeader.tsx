@@ -43,10 +43,7 @@ export const HeroHeader: VFC = () => (
           <br />
           and take out a free loan with your deposits
         </div>
-        <Link
-          href="https://condescending-mayer-703624.netlify.app"
-          passHref={true}
-        >
+        <Link href="https://app.magikfinance.xyz" passHref={true}>
           <a
             className="relative w-full mt-8 rounded-lg md:w-auto group md:mt-10"
             target="_blank"
