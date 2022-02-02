@@ -8,6 +8,7 @@ import { SingleFact } from './SingleFact'
 
 const facts = [
   {
+    key: 0,
     Icon: MagikChartIcon,
     title: 'Beta',
     numbers: 'Magik Lending Vault',
@@ -20,6 +21,7 @@ const facts = [
     ),
   },
   {
+    key: 1,
     Icon: MagikCoinIcon,
     /** we need to scale up this SVG as it's very small due to most likely colorful shadow around it */
     iconClassName: 'scale-[2.75]',
@@ -33,6 +35,7 @@ const facts = [
     ),
   },
   {
+    key: 2,
     Icon: MagikShieldIcon,
     /** besides scaling up this icon is also not centered properly so moving left a bit */
     iconClassName: 'scale-[2.75] -translate-x-2',
@@ -63,16 +66,18 @@ export const BottomPart: VFC = () => (
       our algorithms handle the rest.
     </div>
     <div className="flex flex-col gap-8 mt-14 md:flex-row md:gap-16 md:mt-24">
-      {facts.map(({ Icon, title, numbers, description, iconClassName }) => (
-        <SingleFact
-          key={title}
-          Icon={Icon}
-          iconClassName={iconClassName}
-          title={title}
-          numbers={numbers}
-          description={description}
-        />
-      ))}
+      {facts.map(
+        ({ key, Icon, title, numbers, description, iconClassName }) => (
+          <SingleFact
+            key={key}
+            Icon={Icon}
+            iconClassName={iconClassName}
+            title={title}
+            numbers={numbers}
+            description={description}
+          />
+        )
+      )}
     </div>
     <div className="mt-24 md:mt-48" />
   </div>
