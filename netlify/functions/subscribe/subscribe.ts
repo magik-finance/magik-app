@@ -14,10 +14,7 @@ const handler: Handler = async (event, _context) => {
     const { email } = JSON.parse(event.body ?? '') as RequestBody
 
     const uri = MONGODB_URI
-    const client = new MongoClient(uri, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    } as any)
+    const client = new MongoClient(uri)
 
     const connectedClient = await client.connect()
 
