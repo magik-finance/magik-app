@@ -11,34 +11,38 @@ import AppScreenMobileImage from './app-screen-mobile.png'
 const pros = [
   {
     Icon: UsersIcon,
-    title: 'Better UX',
+    title: 'Dynamic vaults',
     description: (
       <>
-        Borrow for free while we put your collateral to
+        Choose one of three vault strategies.
         <br />
-        work to generate yields to pay off the loan
+        Sit back and relax while Magik scans
+        <br />
+        the ecosystem for the best yields.
       </>
     ),
   },
   {
     Icon: SettingsSliderIcon,
-    title: 'Easy to manage',
+    title: 'Loans that repay itself',
     description: (
       <>
-        Borrow for free while we put your collateral to
+        Borrow for free while we put your deposit to
         <br />
-        work to generate yields to pay off the loan
+        work to auto-repay your loan balance over-time.
       </>
     ),
   },
   {
     Icon: GoldBarsIcon,
-    title: 'Auto repaying loan',
+    title: 'Magik is backed',
     description: (
       <>
-        Borrow for free while we put your collateral to
+        A portion of revenues will be distributed to
         <br />
-        work to generate yields to pay off the loan
+        Magik stakers (sMGK), backing the native token
+        <br />
+        with cash flow which scales with TVL.
       </>
     ),
   },
@@ -47,14 +51,14 @@ const pros = [
 export const TopPart: VFC = () => (
   <div className="flex flex-col px-6 md:max-w-7xl md:mx-auto">
     <div className="text-3xl font-medium text-white md:text-7xl md:mt-24 md:leading-tight">
-      Crypto loans that
+      Complex defi strategies,
       <br />
-      repay itself
+      simplified.
     </div>
     <div className="mt-4 text-sm text-soft-font md:text-xl">
-      Borrow for free while we put your collateral to
+      Magik is the all-in-one platform
       <br />
-      work to generate yields to pay off the loan
+      to manage your portfolio on Solana.
     </div>
     <div className="flex flex-col md:flex-row md:justify-between">
       <div className="flex flex-col gap-12 mt-12 md:gap-11">

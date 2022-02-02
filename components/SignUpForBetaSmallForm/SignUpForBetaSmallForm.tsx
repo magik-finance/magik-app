@@ -15,8 +15,15 @@ export const SignUpForBetaSmallForm: VFC<{ className?: string }> = ({
     formState: { errors },
   } = useForm<FormValues>()
 
-  const submit: SubmitHandler<FormValues> = (values) => {
-    console.log('values', values)
+  const submit: SubmitHandler<FormValues> = async (values) => {
+    try {
+      await fetch('/.netlify/functions/subscribe', {
+        method: 'post',
+        body: JSON.stringify(values),
+      })
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   return (
