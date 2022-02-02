@@ -1,6 +1,7 @@
+import { Listbox, Transition } from '@headlessui/react'
 import clsx from 'clsx'
-import { VFC } from 'react'
-import { SubmitHandler, useForm, Validate } from 'react-hook-form'
+import { Fragment, VFC } from 'react'
+import { SubmitHandler, useForm, Validate, Controller } from 'react-hook-form'
 import { toast } from 'react-toastify'
 
 import { ColorfulLayer } from 'components/ColorfulLayer'
@@ -21,10 +22,7 @@ const leadOptions = [
   { value: 'Other', label: 'Other' },
 ]
 
-const validateLeadInput: Validate<string> = (inputValue) =>
-  !leadOptions.map(({ value }) => value).includes(inputValue)
-    ? 'Invalid option'
-    : undefined
+const inputFieldRules = { required: true }
 
 export const SignUpForBetaForm: VFC<{ className?: string }> = ({
   className,
@@ -33,6 +31,7 @@ export const SignUpForBetaForm: VFC<{ className?: string }> = ({
     register,
     handleSubmit,
     formState: { errors },
+    control,
   } = useForm<FormValues>()
 
   const submit: SubmitHandler<FormValues> = async (values) => {
@@ -93,32 +92,65 @@ export const SignUpForBetaForm: VFC<{ className?: string }> = ({
             }
           )}
         />
-        <div className="relative mt-3 md:mt-4">
-          <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-gray-800 to-gray-900" />
-          <select
-            {...register('lead', {
-              required: true,
-              validate: validateLeadInput,
-            })}
-            className={clsx(
-              'relative w-full px-6 py-3 md:px-8 md:py-4 text-sm md:text-lg font-medium text-white bg-transparent border-none rounded-lg placeholder:text-white',
-              {
-                'ring-2 ring-red-600 focus:ring-2 focus:ring-red-700':
-                  !!errors.lead,
-              }
-            )}
-            defaultValue="default"
-          >
-            <option disabled value="default">
-              How did you find us?
-            </option>
-            {leadOptions.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </select>
-        </div>
+        <Controller
+          control={control}
+          name="lead"
+          rules={inputFieldRules}
+          render={({ field: { value, onChange } }) => (
+            <Listbox value={value} onChange={onChange}>
+              <div className="relative z-10">
+                <div className="relative mt-3 md:mt-4">
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-gray-800 to-gray-900" />
+                  <Listbox.Button
+                    className={clsx(
+                      'relative w-full px-6 py-3 md:px-8 md:py-4 text-sm md:text-lg font-medium text-white bg-transparent border-none rounded-lg placeholder:text-white text-left',
+                      {
+                        'ring-2 ring-red-600 focus:ring-2 focus:ring-red-700':
+                          !!errors.lead,
+                      }
+                    )}
+                  >
+                    {value ?? `How did you find us?`}
+                  </Listbox.Button>
+                </div>
+                <Transition
+                  enter="transition duration-100 ease-out"
+                  enterFrom="transform scale-95 opacity-0"
+                  enterTo="transform scale-100 opacity-100"
+                  leave="transition duration-75 ease-out"
+                  leaveFrom="transform scale-100 opacity-100"
+                  leaveTo="transform scale-95 opacity-0"
+                >
+                  <Listbox.Options className="absolute w-full py-2 mt-1 overflow-auto rounded-lg shadow-lg md:mt-2 bg-gradient-to-r from-gray-800 to-gray-900 max-h-60 md:max-h-80">
+                    {leadOptions.map((option) => (
+                      <Listbox.Option
+                        key={option.value}
+                        value={option.value}
+                        as={Fragment}
+                      >
+                        {({ active, selected }) => (
+                          <li
+                            className={clsx(
+                              'px-6 py-3 text-sm font-medium text-white md:px-8 md:py-4 md:text-lg cursor-pointer',
+                              {
+                                'bg-gradient-to-r from-gray-600 to-gray-700':
+                                  active,
+                                'bg-gradient-to-r from-gray-700 to-gray-800':
+                                  selected,
+                              }
+                            )}
+                          >
+                            {option.label}
+                          </li>
+                        )}
+                      </Listbox.Option>
+                    ))}
+                  </Listbox.Options>
+                </Transition>
+              </div>
+            </Listbox>
+          )}
+        />
         <button
           type="submit"
           className="relative w-full mt-3 rounded-lg md:mt-4 group"

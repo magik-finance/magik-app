@@ -14,7 +14,7 @@ import { XMarkIcon } from 'components/icons/XMarkIcon'
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Dashboard', href: '#' },
+  { name: 'Dashboard', href: 'https://app.magikfinance.xyz' },
   { name: 'Docs', href: '#' },
   { name: 'About', href: '#' },
 ]
