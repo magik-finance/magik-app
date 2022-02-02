@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import { VFC } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { toast } from 'react-toastify'
 
 interface FormValues {
   email: string
@@ -21,8 +22,10 @@ export const SignUpForBetaSmallForm: VFC<{ className?: string }> = ({
         method: 'post',
         body: JSON.stringify(values),
       })
+      toast('Successfully joined our waitlist! 🚀')
     } catch (error) {
       console.error(error)
+      toast(`Something went wrong! 😬`, { type: 'error' })
     }
   }
 

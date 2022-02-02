@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import { VFC } from 'react'
 import { SubmitHandler, useForm, Validate } from 'react-hook-form'
+import { toast } from 'react-toastify'
 
 import { ColorfulLayer } from 'components/ColorfulLayer'
 import { LogoSmallIcon } from 'components/icons/LogoSmallIcon'
@@ -40,8 +41,10 @@ export const SignUpForBetaForm: VFC<{ className?: string }> = ({
         method: 'post',
         body: JSON.stringify(values),
       })
+      toast('Successfully joined our waitlist! 🚀')
     } catch (error) {
       console.error(error)
+      toast(`Something went wrong! 😬`, { type: 'error' })
     }
   }
 
