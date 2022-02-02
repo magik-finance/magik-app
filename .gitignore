@@ -32,3 +32,11 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# webstorm
+.idea
+
+# TypeScript incremental compilation cache
+*.tsbuildinfo
+
+.netlify
