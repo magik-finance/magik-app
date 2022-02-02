@@ -1,3 +1,4 @@
+import { CookieBanner } from 'components/CookieBanner'
 import { Footer } from 'components/Footer'
 import { HeroHeader } from 'components/HeroHeader'
 import { InfoSection } from 'components/InfoSection'
@@ -12,6 +13,7 @@ export default function Index() {
         <InfoSection />
       </main>
       <Footer />
+      <CookieBanner />
     </div>
   )
 }
