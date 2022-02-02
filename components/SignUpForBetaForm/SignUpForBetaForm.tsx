@@ -36,7 +36,7 @@ export const SignUpForBetaForm: VFC<{ className?: string }> = ({
     try {
       await fetch('/.netlify/functions/subscribe', {
         method: 'post',
-        body: JSON.stringify({ email: values.email }),
+        body: JSON.stringify(values),
       })
     } catch (error) {
       console.error(error)
