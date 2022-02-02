@@ -43,13 +43,19 @@ export const HeroHeader: VFC = () => (
           <br />
           and take out a free loan with your deposits
         </div>
-        <Link href="#" passHref={true}>
-          <a className="relative w-full mt-8 rounded-lg md:w-auto group md:mt-10">
+        <Link
+          href="https://condescending-mayer-703624.netlify.app"
+          passHref={true}
+        >
+          <a
+            className="relative w-full mt-8 rounded-lg md:w-auto group md:mt-10"
+            target="_blank"
+            rel="noreferrer"
+          >
             <ColorfulLayer className="transition-opacity opacity-0 blur-md rounded-2xl group-hover:opacity-60 group-focus:opacity-60" />
             <div className="absolute inset-0 rounded-lg bg-primary-accent" />
             <div className="relative flex items-center justify-center gap-2 py-3 text-sm font-medium text-center text-white md:text-base px-7">
-              Read our technical docs{' '}
-              <ArrowUpIcon className="w-3 h-auto rotate-45 md:w-4" />
+              Launch App <ArrowUpIcon className="w-3 h-auto rotate-45 md:w-4" />
             </div>
           </a>
         </Link>
