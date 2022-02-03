@@ -31,7 +31,7 @@ export const TopNavigation: VFC = () => (
     {({ open }) => (
       <>
         <div className="h-14" />
-        <div className="fixed top-0 left-0 z-10 w-full border-b bg-main-background border-b-light-border md:absolute">
+        <div className="fixed top-0 left-0 z-20 w-full border-b bg-main-background border-b-light-border md:absolute">
           <nav
             className="relative flex items-center justify-between px-6 mx-auto h-14 max-w-7xl md:px-6"
             aria-label="Top Navigation"
@@ -95,7 +95,7 @@ export const TopNavigation: VFC = () => (
         >
           <Popover.Panel
             focus
-            className="fixed inset-x-0 h-[440px] z-10 mt-px overflow-hidden transition origin-top transform border-b top-14 bg-main-background border-b-light-border md:hidden"
+            className="fixed inset-x-0 h-[440px] mt-px overflow-hidden transition origin-top transform border-b top-14 bg-main-background border-b-light-border md:hidden z-20"
           >
             <div className="absolute rotate-45 opacity-50 bg-primary-accent -top-16 -right-4 w-36 h-36 blur-3xl" />
             <NoiseLayer />
