@@ -22,8 +22,16 @@ const navigation = [
 const icons = [
   { name: 'Discord', Icon: DiscordIcon, href: '#' },
   { name: 'Telegram', Icon: TelegramIcon, href: '#' },
-  { name: 'GitHub', Icon: GitHubIcon, href: '#' },
-  { name: 'Twitter', Icon: TwitterIcon, href: '#' },
+  {
+    name: 'GitHub',
+    Icon: GitHubIcon,
+    href: 'https://github.com/magik-finance',
+  },
+  {
+    name: 'Twitter',
+    Icon: TwitterIcon,
+    href: 'https://twitter.com/magik_finance',
+  },
 ]
 
 export const TopNavigation: VFC = () => (
